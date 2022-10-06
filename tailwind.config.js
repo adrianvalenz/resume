@@ -5,7 +5,14 @@ module.exports = {
     './frontend/javascript/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "serif": ["chaparral-pro", "serif"]
+      },
+    },
+    listStyleType: {
+      square: 'square',
+    },
   },
   plugins: [],
 }

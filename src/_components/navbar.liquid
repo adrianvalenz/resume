@@ -1,11 +1,14 @@
 <header>
-  <img src="{{ '/images/logo.svg' | relative_url }}" alt="Logo" />
-</header>
+  <section class="max-w-3xl mx-auto px-4 py-8 grid grid-cols-3 gap-4">
+    <div class="col-span-1 flex items-center justify-center">
+      {% render "logo", styles: "fill-blue-500 w-16 md:w-24" %}
+    </div>
 
-<nav>
-  <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about' | relative_url }}">About</a></li>
-    <li><a href="{{ '/posts' | relative_url }}">Posts</a></li>
-  </ul>
-</nav>
+    <div class="col-span-2 flex items-center justify-start">
+      <div>
+        <h1 class="text-lg md:text-3xl font-light uppercase tracking-widest leading-normal md:leading-snug">Adrian Valenzuela</h1>
+        <h2 class="text-xs md:text-xl font-normal text-slate-500">Fullstack Ruby on Rails Software Engineer</h2>
+      </div>
+    </div>
+  </section>
+</header>
