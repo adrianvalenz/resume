@@ -4,12 +4,28 @@
     {% render "head", metadata: site.metadata, title: resource.data.title %}
   </head>
   <body class="{{ resource.data.layout }} {{ resource.data.page_class }}">
-    {% render "navbar", metadata: site.metadata, resource: resource %}
+    <div id="pdf">
+      {% render "navbar", metadata: site.metadata, resource: resource %}
 
-    <main>
-      {{ content }}
-    </main>
-
-    {% render "footer", metadata: site.metadata %}
+      <main>
+        {{ content }}
+      </main>
+    </div>
+      {% render "footer", metadata: site.metadata %}
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+  <script>
+    var element = document.getElementById('pdf');
+    function createPDF() {
+      html2pdf(element, {
+        margin:       10,
+        filename:     'myfile.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, logging: true, dpi: 300, letterRendering: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      });
+          
+      console.log("Resume downloaded");
+    };
+  </script>
 </html>
