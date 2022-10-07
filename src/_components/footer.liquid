@@ -1,14 +1,22 @@
 <div class="bg-slate-800 text-slate-300">
   <footer class="max-w-3xl mx-auto py-8 flex justify-center items-center">
-    <button onClick="createPDF(); fathom.trackGoal('NFTHZ07M', 0);" class="bg-blue-500 hover:bg-blue-600 p-4 inline-block rounded-md flex space-x-4 max-content items-center">
+    <div class="hidden xl:block">
+      <button onClick="createPDF(); fathom.trackGoal('NFTHZ07M', 0);" class="bg-blue-500 hover:bg-blue-600 p-4 inline-block rounded-md flex space-x-4 max-content items-center">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-blue-100 w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+        </span>
+        <span class="text-blue-100 tracking-wide">
+          Download resume
+        </span>
+      </button>
+    </div>
+
+    <div class="xl:hidden">
       <span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-blue-100 w-5 h-5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-        </svg>
+        PDF download button accessible from desktop
       </span>
-      <span class="text-blue-100 tracking-wide">
-        Download resume
-      </span>
-    </button>
+    </div>
   </footer>
 </div>
