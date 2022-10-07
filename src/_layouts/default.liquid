@@ -3,7 +3,7 @@
   <head>
     {% render "head", metadata: site.metadata, title: resource.data.title %}
   </head>
-  <body class="{{ resource.data.layout }} {{ resource.data.page_class }}">
+  <body class="antialiased {{ resource.data.layout }} {{ resource.data.page_class }}">
     <div id="pdf">
       {% render "navbar", metadata: site.metadata, resource: resource %}
 
@@ -19,9 +19,9 @@
     function createPDF() {
       html2pdf(element, {
         margin:       10,
-        filename:     'myfile.pdf',
+        filename:     'adrian_valenzuela_resume.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, logging: true, dpi: 300, letterRendering: true },
+        html2canvas:  { logging: true, dpi: 300, letterRendering: true },
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
       });
           
